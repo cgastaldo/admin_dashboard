@@ -10,7 +10,7 @@
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
     border-color:black;
-    height: 120vh;
+    height: 100vh;
 }
 
 #header{
@@ -18,6 +18,7 @@
     grid-column-end: 6;
     display:grid;
     grid-template-columns: 3fr 5fr;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;    
 }
 
 #header .magnify, .bell{
@@ -103,10 +104,11 @@
     grid-column-end: 2;
     grid-row-start:1;
     grid-row-end: 5;
-    min-width: 225px;
+    min-width: 250px;
     display:grid;
     align-items: start;
     align-content:start;
+    
 }
 
 #sidebar img{
@@ -146,18 +148,67 @@
     grid-row-end: 5;
     background-color: rgb(230, 232, 236);
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(3, 1fr); /* change to 1fr 1fr when done or remove*/
+    grid-template-rows: ;
     display:grid;
     padding:20px;
     gap:20px;
 }
 
+#content #projects img{
+    width:20px;
+}
+
 #projects{
-    grid-row:1/3;
+    display:grid;
+}
+
+#projects .header{
+    font-weight:800;
+    padding-bottom: 10px;
+    font-size: 18px;
+    position:relative;
+    bottom:735px;
+}
+
+#projects .cards{
+    position:relative;
+    top:32px;
+    grid-area: 1/1/2/2;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:15px;
 }
 
 .card{
+    width: 300px;
+    height: 175px;
+    background-color:white;
+    gap: 10px;
+    border-radius: 8px;
+    padding:10px;
+    display:grid;
+    grid-template-rows: 4fr 1fr;
+    padding-bottom:20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-left:40px;
+    border-left:10px solid orange;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
 
+.card .title{
+    font-weight:800;
+    padding-bottom:4px;
+}
+
+.card .images{
+    display:flex;
+    justify-content: end;
+    gap:20px;
+}
+
+#announcements{
+    grid-area:1/2/2/3;
 }
 
 #announcements .header{
@@ -172,6 +223,7 @@
     background-color: white;
     border-radius: 6px;
     padding:20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 #announcements .title{
@@ -179,12 +231,18 @@
 }
 
 #announcements .entry{
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #announcements .entry:not(:first-child){
     border-top: 1px solid rgb(223, 218, 218);
+}
+
+#trending{
+    grid-area: 1/2/2/3;
+    position:relative;
+    top:61%;
 }
 
 #trending .content{
@@ -196,6 +254,7 @@
     gap:10px;
     padding-top:15px;
     padding-bottom:15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 #trending div, #trending p{
@@ -203,7 +262,6 @@
     align-items: center;
     justify-items: start;
     font-size: 12px;
-    
 }
 
 #trending .content img{
